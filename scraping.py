@@ -53,11 +53,11 @@ def parse_video(videos):
 def send_email(video_df):
     try:
         subject = "Top Youtube Trending Videos"
-        body = "This is now trending today in Youtube, an email with attachment sent from Python. Kindly see this attachment."
+        body = "This is now trending today in Youtube, an email with an attachment sent from Python. Kindly see this attachment."
 
         sender_email = "arjunviki44@gmail.com"
         receiver_email = "arjunviki44@gmail.com"
-        password = 'nufb bcug sari fvgd'
+        password = os.environ.get('PASSWORD')
 
         # Create a multipart message and set headers
         message = MIMEMultipart()
